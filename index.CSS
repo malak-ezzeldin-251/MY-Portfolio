@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*adjusting the whole page*/
+body{
+    background-color:#fff9f9;
+    /*change background color*/
+}
+.header{
+text-decoration: none;
+/*hide the line below the word*/
+}
+nav ul{
+    width: 100%;
+    /*take the width of the whole page*/
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 7px 8px rgba(0,0,0,0.1);
+    /*adjusting the shadow of the navbar*/
+}
+nav li{
+    height: 50px;
+    font-family: forte;
+    /*type of the font*/
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+   transition: color 0.3s ease;
+  position: relative; 
+}
+nav a:hover {
+  color: #8b0000;
+  /*change the color on moving the consule above*/
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  /*adjusting the position*/
+  width: 40%;
+  height: 3px;
+  background-color: #8b0000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height:100vh;
+    width:250px;
+    z-index: 999;
+    background-color: #f8ebeb;
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+.menubutton{
+    display:none;
+
+}
+@media(max-width: 800px){
+    .hideonmobile{
+        display:none;
+    }
+    .menubutton{
+        display:block;
+    }
+    /*hide and show according to the width of the page*/
+}
+section{
+    position: relative;
+}
+.Malak{
+    font-size:80px;
+    font-family: cursive;
+    /*type of the font*/
+    font-weight:800px;
+    /*bold percentage*/
+    position: absolute;
+    top:70px;
+    left:880px;
+    /*adjusting the position*/
+    color:rgb(204, 204, 204);
+    /*color of the word*/
+}
+.first_square{
+    width:120px;
+    height:35px;
+    /*dimensions of the box*/
+    background-color: white;
+    border-radius: 10px;
+    /*smoothing the box corners*/
+    border-style: solid;
+    /*adding a solid border*/
+    border-color: black;
+    position: absolute;
+    top:60px;
+    left:800px;
+    /*adjusting the position*/
+    text-align: center;
+    /*adjust the text at the center*/
+    font-family: forte;
+    /*type of the font*/
+}
+.second_square{
+    width:100px;
+    height:100px;
+    /*dimensions of the box*/
+    background-color: white;
+    border-radius: 10px;
+    /*smoothing the box corners*/
+    border-style: solid;
+    /*adding a solid border*/
+    border-color: black;
+    /*color of the border*/
+    position: absolute;
+    top:75px;
+    left:1110px;
+    /*adjusting the position*/
+    text-align: center;
+    /*adjust the text at the center*/
+    font-family: forte;
+    /*type of the font*/
+}
+.third_square{
+    width:100px;
+    height:50px;
+    /*dimensions of the box*/
+    background-color: white;
+    border-radius: 10px;
+    /*smoothing the box corners*/
+    border-style: solid;
+    /*adding a solid border*/
+    border-color: black;
+    /*color of the border*/;
+    position: absolute;
+    top:250px;
+    left:920px;
+    /*adjusting the position*/
+    text-align: center;
+    /*adjust the text at the center*/
+    font-family: forte;
+    /*type of the font*/
+}
+.pink_space{
+    width: 350px;
+    height:260px;
+    background-color: rgb(247, 195, 195);
+    position: absolute;
+    left:70px;
+}
+.Job_title{
+    font-size:60px;
+    font-family: cursive;
+    font-weight:800px;
+    position: absolute;
+    top: 145px;
+    left:55px;
+}
+.attachement{
+    position: absolute;
+    top:5px;
+    left:350px;
+}
+.paragraph{
+    font-family: forte;
+    position: absolute;
+    top:400px;
+}
+.skillssection{
+    display: flex;
+    flex-direction: row;
+    /*row flex*/
+    gap:5%;
+    /*space gaps between items*/
+    padding-top: 400px;
+    /*distance above*/
+    font-family:cursive;
+    text-align: center;
+}
+footer {
+  position: relative;
+  background-color: black;
+  color: white;
+  /*color of the text*/
+  position: absolute;
+  top:620px;
+  /*distance above*/
+  height:100px;
+  /*adjusting the height*/
+  width:100%;
+  /*take the whole page width*/
+}
+.footerimages{
+    display: grid;
+    grid-template-columns: 0.03fr 0.03fr 0.3fr;
+    grid-template-rows: auto;
+    /*adjusting 3 columns and 1 row for the icons*/
+}
+
+

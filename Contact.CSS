@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*adjusting the whole page*/
+body{
+    background-color:#fff9f9;
+    /*change background color*/
+}
+.header{
+text-decoration: none;
+/*hide the line below the word*/
+}
+nav ul{
+    width: 100%;
+    /*take the width of the whole page*/
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 7px 8px rgba(0,0,0,0.1);
+    /*adjusting the shadow of the navbar*/
+}
+nav li{
+    height: 50px;
+    font-family: forte;
+    /*type of the font*/
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+   transition: color 0.3s ease;
+  position: relative; 
+}
+nav a:hover {
+  color: #8b0000;
+  /*change the color on moving the consule above*/
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  /*adjusting the position*/
+  width: 40%;
+  height: 3px;
+  background-color: #8b0000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height:100vh;
+    width:250px;
+    z-index: 999;
+    background-color: #f8ebeb;
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+.menubutton{
+    display:none;
+
+}
+@media(max-width: 800px){
+    .hideonmobile{
+        display:none;
+    }
+    .menubutton{
+        display:block;
+    }
+    /*hide and show according to the width of the page*/
+}
+.contactimage{
+    border-radius: 100%;
+    /*smoothing the image corners*/
+    margin-top: 30px;
+    /*distance above*/
+}
+.contactparagraph{
+    padding:10px 300px 0 300px;
+    /*adjusting gaps - top right bottom left*/
+    text-align: center;
+    /*adjust the text at the center*/
+    font-family: 'Times New Roman', Times, serif;
+    /*type of the font*/
+}
+.contactgrid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    /*apply grid with 3 columns and 1 row*/
+    gap:70px;
+    /*gaps between items*/
+    align-items: center;
+    justify-content: center;
+    /*adjust items at the center*/
+    margin-top: 30px;
+    /*apply distance above*/
+    font-family: cursive;
+    /*type of the font*/
+}
+.sec1{
+    background-color: #f7dede;
+    width:200px;
+    height:200px;
+    /*adjusting dimensions*/
+    border-radius: 20px;
+    /*smoothing the corners*/
+    text-align: center;
+    /*apply text at the center*/
+}
+.sec2{
+    background-color: #f7dede;
+    width:200px;
+    height:200px;
+    /*adjusting dimensions*/
+    border-radius: 20px;
+    /*smoothing the corners*/
+    text-align: center;
+    /*apply text at the center*/
+}
+.sec3{
+    background-color: #f7dede;
+    width:200px;
+    height:200px;
+    /*adjusting dimensions*/
+    border-radius: 20px;
+    /*smoothing the corners*/
+    text-align: center;
+    /*apply text at the center*/
+}
+.article_container{
+    position: relative;
+    overflow: hidden;
+}
+.card_data{
+    width: 180px;
+    height:80px;
+    /*adjusting dimensions*/
+    background-color:white;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*apply items at the center*/
+    box-shadow: 0px 8px 12px hsla(0, 0%, 0%, 15);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -120px;
+    left:0;
+    right:0;
+    /*adjusting gaps*/
+    opacity: 0;
+    /*invisible*/
+    transition: opacity 1s 1s;
+}
+.article_container:hover .card_data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition:opacity .3s ;
+}
+.article_container:hover {
+    animation: remove-overflow 2s forwards;
+}
+.article_container:not(:hover){
+    animation:show-overflow 2s forwards;
+}
+
+.article_container:not(:hover) .card_data{
+    animation:remove-data 2s forwards;
+}
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+     50%{
+        transform: translateY(-10rem);
+    }
+     100%{
+        transform: translateY(.5rem);
+    }
+}
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+/*adjusting the position and the visibility of the cards*/
+
+footer {
+  position: relative;
+  margin-top: 50px;
+  /*distance above*/
+  background-color: black;
+  color: white;
+  /*text color*/
+  padding: 10px;
+}
+.footerimages{
+    display: grid;
+    grid-template-columns: 0.03fr 0.03fr 0.3fr;
+    grid-template-rows: auto;
+    /*adjusting 3 columns and 1 row for the icons*/
+}
