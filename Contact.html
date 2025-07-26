@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="M icon.png">
+    <link rel="stylesheet" href="Contact.CSS">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header"><span style="font-family: forte; color:black; font-size:40px;">Web</span>
+        <span style="font-family:forte; color:#8b0000; font-size:40px;">Developer</span></a>
+    </header>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hidesidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <!--hide the sidebar on clicking the x icon-->
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        <!--page links for thw sidebar-->
+        </ul>
+        <ul>
+            <li class="hideonmobile"><a href="Skills.html">Skills</a></li>
+            <li class="hideonmobile"><a href="works.html">Works</a></li>
+            <li class="hideonmobile"><a href="Contact.html">Contact Us</a></li>
+             <!--page links for the navbar-->
+            <li class="menubutton" onclick=showsidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            <!--show the sidebar on clicking the icon-->
+        </ul>
+    </nav>
+    <script>
+        function showsidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+     </script>
+     <!--show and hide the sidebar according to the page size-->
+     </script>
+
+     <div style="display:flex; justify-content: center; align-items: center;">
+     <img src="Contactimage.jpg" height="120px" width="120px" class="contactimage">
+    <!--adjusting the image position-->
+     </div>
+
+     <h2 style="font-family:cursive; text-align: center;">Contact Us</h2>
+     <p class="contactparagraph"><b> <!--bold--> For any inquiries, support, or collaboration opportunities, feel 
+        free to reach out through our contact form or email. We're here to 
+        assist you and will respond as quickly as possible</b></p>
+
+        <div class="contactgrid">
+        <article class="article_container">
+         <section class="sec1">
+            <img src="Call icon.svg" width="50px" height="50px" style="margin-top: 10px;">
+            <!--adjusting the image position and gap above-->
+            <h4>Call</h4>
+            <!--apply heading-->
+            <div class="card_data">
+                <h3> +20 1021255607 </h3>
+             </div>
+             </section>
+            </article>
+
+         <article class="article_container">
+         <section class="sec2">
+            <img src="email icon.png" width="50px" height="50px" style="margin-top: 10px;">
+            <!--adjusting the image position and gap above-->
+            <h4>Email</h4>
+            <!--apply heading-->
+            <div class="card_data">
+                <h3> malakezzeldin251<br>@gmail.com </h3>
+             </div>
+             </section>
+            </article>
+            
+            <article class="article_container">
+         <section class="sec3">
+            <img src="address icon.png" width="50px" height="50px" style="margin-top: 10px;">
+            <!--adjusting the image position and gap above-->
+            <h4>Address</h4>
+            <!--apply heading-->
+            <div class="card_data">
+                <h3> 14 namera mosque street </h3>
+             </div>
+             </section>
+             </article>
+        </div>
+            <a href="contact_form.html" style="color: black;"><h4 style="font-family: cursive; text-align: center;">Contact form instead</h4></a>
+            <!--link to the contact form page-->
+         <footer>
+    <p style="padding: 10px; font-family:cursive; opacity: 50%;">@2025 website <br>All rights reserved</p>
+    <!--making gap distnce between paragraph and the footer + change the transparency of the paragraph-->
+    <div class="footerimages">
+        <a href="https://www.facebook.com/share/1AjewtPNdV/"> <img src="Facebook-icon.png" height="20px" width="20px"><!--adjusting the icon dimension--></a>
+        <!--clickable facebook icon reaches my faceboom account-->
+        <a href="https://youtube.com/@malakezzeldin7695?si=YbUmPXnlEQtFLq4D"><img src="youtube-icon.png" height="20px" width="20px"><!--adjusting the icon dimension--></a>
+        <!--clickable youtube icon reaches my youtube channel-->
+        <a href="https://www.tiktok.com/@malak.ezzeldin8?_t=ZS-8yFtsp4Jg8e&_r=1"><img src="TikTok-icon.png" height="20px" width="20px"><!--adjusting the icon dimension--></a>
+        <!--clickable tiktok icon reaches my tiktok account-->
+    </div>
+    </footer>
+</body>
+</html>

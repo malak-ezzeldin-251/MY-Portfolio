@@ -1,0 +1,69 @@
+*
+/*the whole page*/
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#fff9f9;
+}
+fieldset {
+  border: none;
+  /*hide fieldset border*/
+  padding: 25px;
+  width:400px;
+  margin: 100px 0 0 800px;
+  /*applying gaps around*/
+  background: #f7dede;  
+  border-radius: 30px;
+  /*smoothing the corners*/
+  color:black;
+  font-family: cursive;
+  /*type of the font*/
+}
+input {
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+    /*smoothing the corners*/
+    background-color: #e2baba;
+}
+form input[type="submit"] 
+/*adjusting the submit button only*/ 
+{
+     background-color:#c41e3a;
+      color: white;
+      /*text color*/
+      width:130px;
+      border: none;
+      /*hide the border*/
+      border-radius: 40px;
+      /*smoothing the corners*/
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 30px; 
+      /*gap above*/ 
+      font-family: cursive;
+      /*type of the font*/ 
+}
+
+form input[type="submit"]:hover
+/*on moving above the submit button*/
+{
+ background-color: #8b0000;
+ font-weight: bold;
+ /*bold percentage*/
+  box-shadow: 0 0 10px #a3142f;
+  /*applying shadow*/
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+.Contactimage{
+    position: absolute;
+    top:180px;
+    left:200px;
+    /*adjusting the position*/
+
+}
